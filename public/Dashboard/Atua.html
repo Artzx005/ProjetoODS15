@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos com Blocos</title>
+    <link rel="stylesheet" href="../styles/style_dashboard/atua.css">
+    <script type="module" src="../autentic.js"></script>
+</head>
+<body>
+    
+    <a href="../dashboard.html"><button class="button">Voltar</button></a>
+    <!-- Formulário para gerar novo bloco -->
+    <div id="new-block-section" style="display:none;">
+        <h2>Adicionar Bloco ao Produto</h2>
+        <form id="block-form">
+            <label for="select-product">Selecione o Produto:</label>
+            <select id="select-product"></select>
+
+            <label for="block-quantity">Quantidade em MG:</label>
+            <input type="number" id="block-quantity" required>
+
+            <label for="block-date">Data de Uso:</label>
+            <input type="date" id="block-date" required>
+
+            <label for="block-description">Descrição do Bloco:</label>
+            <textarea id="block-description" required></textarea>
+
+            <button type="submit">Gerar Bloco</button>
+        </form>
+    </div>
+    
+    <h1>Produtos Cadastrados</h1>
+    <div id="product-list"></div>
+    <script type="module" src="../config/path_dash/atualizar.js"></script>
+</body>
+</html>

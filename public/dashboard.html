@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Terra Viva</title>
+    <link rel="stylesheet" href="./styles/style_dashboard/dashboard.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script type="module" src="../autentic.js"></script>
+</head>
+<body>
+    <!-- Botão para alternar tema -->
+    <button id="theme-toggle" class="theme-toggle">
+        <i class='bx bx-moon'></i> <!-- Ícone para modo escuro -->
+    </button>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <!-- Espaço para logo -->
+                <div class="logo-placeholder" >
+                
+                </div>
+                <h2>Terra Viva</h2>
+            </div>
+            <!-- Opções de navegação -->
+            <nav class="sidebar-menu">
+                <a href="./index.html" class="dashboard-button">Home</a>
+                <a href="./Dashboard/chat.html" class="dashboard-button">Chat</a>
+                <a href="./Dashboard/cadItens.html" class="dashboard-button">Cadastrar Produto</a>
+                <a href="./Dashboard/Atua.html" class="dashboard-button">Atualizar Produto</a>
+                <a href="./userstelas/normas.html" class="dashboard-button">Jurisdição</a>
+                <a href="./Dashboard/faleconoscoAgri.html" class="dashboard-button">Fale Conosco</a>
+            </nav>
+        </aside>
+
+        <!-- Conteúdo principal (opcional para mais tarde) -->
+
+    </div>
+
+    <div class="container" id="reportContainer">
+        <h1>Relatório de Uso de Agrotóxicos por Produto</h1>
+    
+        <div class="chart-container">
+            <div class="chart">
+                <div class="chart-title">Distribuição de Uso de Agrotóxicos</div>
+                <canvas id="pieChart"></canvas>
+            </div>
+    
+            <div class="chart">
+                <div class="chart-title">Comparação de Uso entre Produtos</div>
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+        
+        <button class="export-button" id="exportBtn">Exportar Relatório em PDF</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script type="module" src="./config/path_dash/dashboard.js"></script>
+    <script src="./JSstyle/toggle.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/faleconos.css">
+    <script type="module" src="../autentic.js"></script>
+    <title>Fale Conosco</title>
+</head>
+<body>
+<div class="container">
+    <a href="../dashboard.html"><button type="button" class="voltar-btn">
+        ←
+    </button></a>
+<div class="wrapper">
+    <form id="contactForm">
+        <h1>Fale Conosco</h1>
+
+        <div class="input-box">
+            <input type="text" id="name" placeholder="Nome" required>
+        </div>
+
+        <div class="input-box">
+            <input type="email" id="email" placeholder="E-mail" required>
+        </div>
+
+        <div class="input-box">
+            <input type="tel" id="phone" placeholder="Telefone" required>
+        </div>
+
+        <div class="input-box">
+            <textarea id="message" placeholder="Sua pergunta" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn" >Enviar</button>
+    </form>
+    </form>
+</div>
+</div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script type="module" src="../config/path_user/faleconosco.js"></script>
+</body>
+</html>

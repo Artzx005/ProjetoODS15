@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat IA</title>
+    <link rel="stylesheet" href="../styles/style_dashboard/chat.css">
+    <script type="module" src="../autentic.js"></script>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>Chat TerraViva</h1>
+        </div>
+        <div class="chat-box" id="chat-box">
+            <!-- Mensagens serão exibidas aqui -->
+        </div>
+        <div class="chat-input">
+            <select id="question-select">
+                <option value="">Escolha uma pergunta...</option>
+                <option value="1">Quais são os riscos do uso exagerado de agrotoxicos?</option>
+                <option value="2">Como posso entrar em contato?</option>
+                <option value="3">Quais serviços vocês oferecem?</option>
+                <option value="4">Como funciona o processo de atendimento?</option>
+                <!-- Adicione mais perguntas aqui -->
+            </select>
+            <button id="send-btn">Enviar</button>
+        </div>
+    </div>
+    <script src="../config/chat.js"></script>
+</body>
+</html>

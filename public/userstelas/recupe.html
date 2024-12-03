@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style_user/recupe.css">
+    <title>Recuperar Senha</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <style>
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+ <!--   <div class="recovery-container">
+        <h2>Recuperar Senha</h2>
+        <input type="email" id="email" placeholder="Digite seu email" required>
+        <button id="resetButton">Enviar Link de Recuperação</button>
+        <div id="message" class="message"></div>
+    </div>
+-->
+
+    <div class="container">
+       <a href="../login.html"> <button type="button" class="voltar-btn">
+            ←
+        </button></a>
+        <div class="wrapper">
+            <form id="recover-form">
+                <h1>Recuperar Senha</h1>
+
+                <div class="input-box">
+                    <input type="email" id="email" placeholder="Digite seu E-mail" required>
+                </div>
+
+                <button type="submit" id="resetButton" class="btn">Enviar</button>
+
+                <div class="message"><p id="message" style="display: none; color: #fff; text-align: center; margin-top: 20px;">Mensagem de recuperação enviada para o e-mail!</p></div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script type="module">
+        // Configuração do Firebase
+        import firebaseConfig from '../config/CONFIG.js';
+
+        // Inicializando o Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Função para enviar o link de recuperação de senha
+        function sendPasswordReset() {
+            var email = document.getElementById('email').value;
+            var messageDiv = document.getElementById('message');
+            
+            firebase.auth().sendPasswordResetEmail(email)
+                .then(function() {
+                    messageDiv.innerHTML = 'Link de recuperação enviado para o email: ' + email;
+                    messageDiv.style.color = 'green';
+                })
+                .catch(function(error) {
+                    messageDiv.innerHTML = 'Erro ao enviar o link: ' + error.message;
+                    messageDiv.style.color = 'red';
+                });
+        }
+
+        // Adicionando o evento de clique ao botão
+        document.getElementById('resetButton').onclick = sendPasswordReset;
+    </script>
+
+</body>
+</html>

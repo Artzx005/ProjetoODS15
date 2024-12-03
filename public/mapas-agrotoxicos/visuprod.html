@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibição de Produtos</title>
+    <link rel="stylesheet" href="../styles/style_terra/visuprod.css">
+</head>
+<body>
+<div class="container">
+    <a href="../index.html"><button class="button">Voltar</button></a>
+    <h1>Produtos Cadastrados</h1>
+    
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Pesquisar produto..." onkeyup="filterProducts()">
+    </div>
+
+    <div id="product-list" class="product-list"></div>
+
+    <div id="pagination" class="pagination"></div>
+</div>
+    <!-- Firebase SDK compatível com a versão do navegador (sem imports de módulos) -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script type="module" src="../config/path_home/produtos.js"></script>
+</body>
+</html>

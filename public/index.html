@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraViva</title>
+    <link rel="stylesheet" href="./styles/style_terra/home.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  
+    <header class="header" data-aos="fade-down">
+        <div class="logo">
+            <img src="./styles/img/logofront.png" alt="Logo TerraViva">
+            <span>TerraViva</span>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="./mapas-agrotoxicos/visuprod.html">Produtos</a></li>
+                <li><a href="./mapas-agrotoxicos/relatoriopublico.html">Relatórios Atuais</a></li>
+                <li><a href="./mapas-agrotoxicos/mapa.html">Mapa</a></li>
+                <li><a href="./userstelas/faleconosco.html">Fale conosco</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <div class="user-icon" onclick="toggleDropdown()">👤</div>
+            <div id="dropdown" class="dropdown-content">
+                <a href="./login.html" id="login">Login</a>
+                <a href="./cadastro.html" id="register">Cadastrar</a>
+            </div>
+        </div>
+    </header>
+    
+
+    <div class="background">
+    <video loop autoplay muted>
+        <source src="./styles/img/videos/videoplayback.mp4" type="video/mp4">
+    </video>
+    </div>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Cuidado com os Agrotóxicos: Tecnologia a Seu Favor</h2>
+            <p>O nosso lema é levar transparência e confiabilidade para sua plantação e para os seus consumidores.</p>
+            <a href="./userstelas/faleconosco.html"><button class="cta-button">Agendar Consulta</button></a>
+            <a href="./login.html"><button class="cta-button">Para agricultores</button></a>
+        </div>
+    </section>
+
+    <section class="about-us">
+        <div class="container cards-container">
+            <div class="card" data-aos="fade-up">
+                <h3 style="text-align: center;">Transparência no Blockchain</h3>
+                <p>Com nossa tecnologia, garantimos transparência total no uso de agrotóxicos, rastreando cada etapa do processo.</p>
+            </div>
+            <div class="card" data-aos="fade-up">
+                <h3  style="text-align: center;">Segurança para o Consumidor</h3>
+                <p>Nossa solução assegura que os consumidores saibam exatamente o que foi utilizado na produção de seus alimentos.</p>
+            </div>
+            <div class="card" data-aos="fade-up">
+                <h3 style="text-align: center;">Sustentabilidade</h3>
+                <p>Promovemos práticas agrícolas sustentáveis, minimizando o impacto ambiental e preservando a biodiversidade.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="about-us-section">
+        <div class="container">
+            <div class="card about-card" data-aos="fade-up">
+                <h3 style="text-align: center;">Nosso Objetivo</h3>
+                <p>Nosso principal objetivo é transformar o setor agrícola, proporcionando transparência e 
+                    rastreabilidade no uso de agrotóxicos. Utilizando a tecnologia blockchain, garantimos que os consumidores 
+                    tenham confiança nos produtos que estão comprando, enquanto os agricultores podem garantir a 
+                    conformidade com as melhores práticas agrícolas.</p>
+            </div>
+            <div class="card about-card" data-aos="fade-up">
+                <h3 style="text-align: center;">Nossa Equipe</h3>
+                <p>Somos uma equipe de Estudantes especialistas em tecnologia.
+                    Cada membro de nossa equipe está comprometido em trazer inovação para o setor agrícola, com um forte foco em 
+                    práticas agrícolas responsáveis e tecnológicas.</p>
+            </div>
+            <div class="card about-card" data-aos="fade-up">
+                <h3 style="text-align: center;">Compromisso com o Consumidor</h3>
+                <p>Nosso compromisso com o consumidor é oferecer informações claras e precisas sobre o uso de 
+                    agrotóxicos nos produtos agrícolas. Garantimos a transparência e a rastreabilidade completa, 
+                    assegurando que o consumidor tenha confiança na origem e qualidade do que consome.</p>
+            </div>
+            <div class="card about-card" data-aos="fade-up">
+                <h3 style="text-align: center;">Compromisso com o Agricultor</h3>
+                <p>Para os agricultores, fornecemos ferramentas tecnológicas que facilitam o rastreamento e o 
+                    controle do uso de defensivos agrícolas. Estamos ao lado dos produtores, ajudando-os a adotar práticas 
+                    mais seguras e transparentes, enquanto aumentam sua competitividade no mercado.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="latest-news">
+        <div class="container cards-container">
+            <div class="card" data-aos="fade-up">
+                <h3>Nova Lei de Agrotóxicos</h3>
+                <p>Confira as novas regulamentações para o uso de agrotóxicos e como isso afeta os agricultores.</p>
+            </div>
+            <div class="card" data-aos="fade-up">
+                <h3>Agrotóxicos no Brasil</h3>
+                <p>Um estudo recente mostra o aumento do uso de agrotóxicos e suas implicações para a saúde pública.</p>
+            </div>
+            <div class="card" data-aos="fade-up">
+                <h3>Feira Agrícola 2024</h3>
+                <p>Saiba mais sobre a próxima feira agrícola e as inovações no setor de agrotóxicos que serão apresentadas.</p>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contatos</h4>
+                <ul>
+                    <li><a href="#">E-Mail</a></li>
+                    <li><a href="./userstelas/faleconosco.html">Fale Conosco</a></li>
+                    <li><a href="#">0800</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Redes sociais</h4>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">X</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TerraViva - Rastreabilidade de Agrotóxicos com Blockchain | Alinhada ao ODS 15</p>
+        </div>
+    </footer>
+    
+
+
+</body>
+
+<script>
+    function toggleDropdown() {
+        document.getElementById("dropdown").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+        if (!event.target.matches('.user-icon')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+
+    document.getElementById('login').onclick = function() {
+        // Redirecionar ou abrir modal de login
+        alert("Abrir página de Login");
+    };
+
+    document.getElementById('register').onclick = function() {
+        // Redirecionar ou abrir modal de cadastro
+        alert("Abrir página de Cadastrar-se");
+    };
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,  // Duração das animações
+    });
+</script>
+
+</html>

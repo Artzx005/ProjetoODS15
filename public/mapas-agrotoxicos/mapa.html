@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Uso de Agrotóxicos</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #8aa7a9;
+        }
+
+        .logo img {
+            height: 40px; /* ajuste conforme necessário */
+        }
+        
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+        
+        .navbar ul li {
+            margin: 0 15px;
+        }
+        
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .navbar ul li a:hover {
+            color: #ddd;
+        }
+
+        #map {
+            width: 800px;
+            height: 500px;
+            border: 2px solid rgb(255, 255, 255);
+            margin: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        #info {
+            flex: 0.4;
+            padding: 20px;
+            background-color: #e1efdf;
+            box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+        }
+
+        th {
+            background-color: #f4f6f8;
+            color: #333;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .Vermelho {
+            background-color: #ff6b6b;
+            color: white;
+        }
+
+        .Amarelo {
+            background-color: #feca57;
+            color: white;
+        }
+
+        .Verde {
+            background-color: #1dd1a1;
+            color: white;
+        }
+        /* Estilo do botão */
+        .button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #1dd1a1;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #16b99d;
+        }
+
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            #map {
+                height: 50vh;
+                border-right: none;
+            }
+
+            #info {
+                flex: 1;
+                height: 50vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html"><button class="button">Voltar</button></a>
+    <div id="map"></div>
+
+    <div id="info">
+        <h1>Informações de Agrotóxicos</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cor</th>
+                    <th>Quantidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="Vermelho">Vermelho</td>
+                    <td>Uso Alto</td>
+                </tr>
+                <tr>
+                    <td class="Amarelo">Amarelo</td>
+                    <td>Uso Moderado</td>
+                </tr>
+                <tr>
+                    <td class="Verde">Verde</td>
+                    <td>Baixo Uso</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script type="module" src="../config/path_home/mapa.js"></script>
+</body>
+</html>

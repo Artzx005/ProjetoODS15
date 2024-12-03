@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produto</title>
+    <link rel="stylesheet" href="../styles/style_dashboard/cadastro.css">
+    <script type="module" src="../autentic.js"></script>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Cadastro de Produto</h1>
+        <div class="form-content">
+            <form id="product-form">
+                <label for="product-name">Nome do Produto:</label>
+                <input type="text" id="product-name" required>
+                
+                <label for="agrotoxico-used">Agrotóxico Usado:</label>
+                <input type="text" id="agrotoxico-used" required>
+
+                <label for="agrotoxico-quantity">Quantidade de Agrotóxico (em MG):</label>
+                <input type="number" id="agrotoxico-quantity" required>
+                <div id="alert-excess" class="alert">⚠️ Atenção! Quantidade de agrotóxico maior que 30 MG!</div>
+                
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" required>
+                
+                <label for="product-description">Descrição:</label>
+                <textarea id="product-description" required></textarea>
+                
+                <div class="checkbox-container">
+                    <input type="checkbox" id="agree-terms" required>
+                    <label for="agree-terms"><a href="../userstelas/normas.html">Ao clicar em "Li e Concordo", você declara que leu, 
+                        compreendeu e concorda com todos os termos e condições deste documento.</a></label>
+                </div>
+                
+                <button type="submit">Cadastrar</button>
+                <a href="../dashboard.html">Voltar ao Painel</a>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const agrotoxicoQuantityInput = document.getElementById('agrotoxico-quantity');
+        const alertExcess = document.getElementById('alert-excess');
+
+        // Função para exibir alerta se a quantidade for maior que 30 MG
+        agrotoxicoQuantityInput.addEventListener('input', function() {
+            const quantity = parseFloat(agrotoxicoQuantityInput.value);
+            if (quantity > 30) {
+                alertExcess.style.display = 'block';
+            } else {
+                alertExcess.style.display = 'none';
+            }
+        });
+
+        // Lógica de cadastro
+        const form = document.getElementById('product-form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const productName = document.getElementById('product-name').value;
+            const agrotoxicoUsed = document.getElementById('agrotoxico-used').value;
+            const agrotoxicoQuantity = document.getElementById('agrotoxico-quantity').value;
+            const cep = document.getElementById('cep').value;
+            const productDescription = document.getElementById('product-description').value;
+
+            // Aqui você pode fazer a lógica de envio do formulário para o Firebase
+            console.log("Produto cadastrado: ", {
+                nome: productName,
+                agrotoxico: agrotoxicoUsed,
+                quantidade: agrotoxicoQuantity,
+                cep: cep,
+                descricao: productDescription
+            });
+
+            alert("Produto cadastrado com sucesso!");
+        });
+    </script>
+
+    <script type="module" src="../config/path_dash/appcadIten.js"></script>
+</body>
+</html>
